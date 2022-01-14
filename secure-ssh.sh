@@ -45,5 +45,5 @@ service rsyslog restart
 echo "*/1 * * * * root python3 /root/blackList.py" >> /etc/crontab
 service cron restart
 
-echo "El script ha sido completado,La password del fichero y del usuario ssh es:" $pass
-echo "La conexion es: ssh ssh@ip -i id_rsa -p " $port
+echo "El script ha sido completado,La password del fichero y del usuario sssh es:" $pass
+echo "La conexion es: ssh sssh@ip -i id_rsa -p " $port
