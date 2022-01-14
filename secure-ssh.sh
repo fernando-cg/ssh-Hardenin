@@ -5,6 +5,9 @@ if (( $EUID != 0 )); then
     exit
 fi
 
+apt-install ufw -y
+apt-install openssh-server -y
+
 pass=$(date | sha256sum | awk '{print $1}') #pass gen
 path=/etc/ssh/sshd_config
 port=$(shuf -i 40000-60000 -n 1) #Puerto random
