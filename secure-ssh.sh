@@ -34,7 +34,7 @@ sed -i 's/#SyslogFacility.*/SyslogFacility local3/' $path
 echo "A continuacion introduceme un fichero con una lista de ips para hacer una white list"
 read diccionario
 ufw enable
-for i in `cat $diccionario`; do sudo ufw allow from $i to any port 22 ;done
+for i in `cat $diccionario`; do sudo ufw allow from $i to any port $port ;done
 
 #configuracion para la blacklist
 mkdir /var/log/sshd
